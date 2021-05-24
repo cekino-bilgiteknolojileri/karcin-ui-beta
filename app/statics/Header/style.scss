@@ -1,0 +1,62 @@
+@import '../../styles/variable.scss';
+header{background:#181827;height:60px;box-sizing:border-box;display:flex;justify-content:space-between;position:relative;z-index:2}
+
+/* Left */
+.headerLeft{display:flex;align-items:center}
+
+.headerIcon{padding:0px 14px;height:100%;border-right:1px solid #232335;display:flex;align-items:center;justify-content:center;background:#0b0b15;cursor:pointer;transition:$defaultTransition}
+.headerIcon svg{font-size:20px;color:#646c9a;transition:$defaultTransition}
+.headerIcon:hover{background:#414154}
+.headerIcon:hover svg{color:#fff}
+
+.headerLogo{display:block;margin:0px 16px}
+.headerLogo img{height:32px;display:block}
+
+.headerLeft em{font:normal 500 13px $defaultFont;color:#a9b5ca}
+
+/* Right */
+.headerRight{display:flex;margin-right:15px}
+
+.headerRightIcon{position:relative}
+
+.headerRightIcon span.link{display:flex;align-items:center;justify-content:center;cursor:pointer;height:100%;transition:$defaultTransition;padding:0px 15px;color:#a9b5ca;font:normal 500 13px $defaultFont}
+.headerRightIcon span.link:hover{background:#414154;color:#fff}
+
+.headerRightIconVisible{display:flex;align-items:center;justify-content:center;cursor:pointer;height:100%;transition:$defaultTransition;padding:0px 15px}
+.headerRightIconVisible svg{font-size:20px;color:#646c9a;transition:$defaultTransition}
+.headerRightIconVisible:hover{background:#414154}
+.headerRightIconVisible:hover svg{color:#fff}
+
+.headerRightIconVisible span.count{position:absolute;top:10px;right:10px;background:#fd103f;font:normal 500 10px $defaultFont;color:#fff;padding:1px 4px 2px 4px;border-radius:2px}
+
+.headerRightIcon em.flag{display:block;width:18px;height:16px;border-radius:2px;font:normal 500 13px $defaultFont;color:#a9b5ca;text-align:center;transition:$defaultTransition}
+.headerRightIconVisible:hover em{color:#fff}
+
+/* DropDown */
+.headerDropDown{position:absolute;top:calc(100% + 16px);opacity:0;transition:$defaultTransition;transform:scale(0.82);pointer-events:none;box-shadow:0px 0px 30px 0px rgba(82,63,105, 0.2);border-radius:3px}
+.headerDropDown.opened{opacity:1;transform:scale(1);pointer-events:auto}
+.headerDropDown::before{content:'';width:0px;height:0px;position:absolute;top:-15px;right:calc(50% - 8px);border:8px solid transparent;border-bottom-color:#fff}
+
+.headerDropDown.language{left:calc( -1 * ((150px / 2) - 24px) )}
+.headerDropDown.blue{left:calc( -1 * ((250px / 2) - 24px) )}
+.headerDropDown.blueBig{left:calc( -1 * ((300px / 2) - 24px) )}
+
+.headerDropDown.user{right:15px}
+.headerDropDown.user::before{right:14px;border-bottom-color:#2e47ae}
+
+.headerDropDown.blueArrow::before{border-bottom-color:#3b53b7}
+
+/* DropDown Language */
+.dropDownLanguage{background:#fff;border-radius:3px;width:150px;display:flex;flex-direction:column;padding:4px 0px;box-sizing:border-box}
+.dropDownLanguage span{display:flex;flex-wrap:wrap;align-items:center;padding:10px 14px;transition:$defaultTransition;cursor:pointer}
+.dropDownLanguage b{font:normal 500 12px $defaultFont;color:#5e6c84;margin-left:10px;transition:$defaultTransition}
+.dropDownLanguage span:hover{background:#414154}
+.dropDownLanguage span:hover b, .dropDownLanguage span:hover em{color:#fff}
+
+// Responsive
+@include media('<=bigPhone'){
+	.headerLeft em{display:none}
+	.headerRight .headerRightIcon:nth-child(2){display:none}
+	.headerDropDown.language{left:unset;right:0px}
+	.headerDropDown.language::before{right:16px}
+}

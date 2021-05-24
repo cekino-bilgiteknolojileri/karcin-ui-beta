@@ -1,0 +1,31 @@
+@import '../../../styles/variable.scss';
+
+.layoutTitle{display:flex;justify-content:space-between;height:16px}
+.layoutTitle > h3{font:normal 600 13px $defaultFont;color:#919fb1}
+
+.layoutTitleRight{display:flex;align-items:flex-end}
+.layoutTitleRight p{font:normal 400 11px $defaultFont;color:#919fb1;margin-right:5px}
+.layoutTitleRightText p{margin-right:0px}
+.layoutTitleRightTextButton p{cursor:pointer;color:#5e6c84;font-weight:500;transition:$defaultTransition}
+.layoutTitleRightTextButton p:hover{opacity:0.8}
+
+/* Button */
+.layoutTitleRightButton{display:flex;background:#32c6bf;font:normal 500 10px $defaultFont;color:#fff;border-radius:3px;cursor:pointer;transition:$defaultTransition;padding:3px 8px 3px 8px}
+.layoutTitleRightButton:hover{background:#2aa7a1}
+.layoutTitleRightButton strong{font-weight:500}
+.layoutTitleRightButton span.load{width:10px;height:10px;border:2px solid #fff;box-sizing:border-box;border-radius:10px;border-top-color:rgba(255, 255, 255, 0.32);margin-left:4px;transition:$defaultTransition;animation-name:loadCircleButton;animation-duration:1000ms;animation-timing-function:linear;animation-iteration-count:infinite;position:relative;top:1px}
+.layoutTitleRightButton.disable{opacity:0.64;pointer-events:none}
+
+@keyframes loadCircleButton{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+
+/* Switch */
+.layoutTitleRightSwitch{background:#fff;height:17px;box-sizing:border-box;width:34px;border-radius:3px;border:1px solid #dcdfe2;box-shadow:0px 2px 4px rgba(0,0,0,0.04);cursor:pointer;transition:$defaultTransition}
+.layoutTitleRightSwitch em{display:block;transition:$defaultTransition;border-radius:2px;background:#e5e5e5;width:11px;height:11px;position:relative;top:2px;left:2px}
+.layoutTitleRightSwitch.active{border-color:#97ec6c}
+.layoutTitleRightSwitch.active em{background:#7dd451;left:19px}
+
+/* Content */
+.layoutContent{border:1px solid #dcdfe2;padding:20px;background:#fff;border-radius:3px;margin-top:5px;box-shadow:0px 2px 4px rgba(0,0,0,0.04)}

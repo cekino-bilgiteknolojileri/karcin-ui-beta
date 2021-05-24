@@ -1,0 +1,24 @@
+@import '../../../styles/variable.scss';
+
+.alertMessages{display:flex}
+
+.alert_success{background:#E3FCEF;;color:#006644}
+.alert_error{background:#FDEBE6;color:#bf2600}
+.alert_warning{background:#FEFAE6;color:#ff8b00}
+.alert_info{background:#f1f7ff;color:#505f79}
+
+.alertMessagesIcon{width:30px;border-radius:3px 0px 0px 3px}
+.alertMessagesIcon svg{color:#fff;font-size:16px;position:relative;top:11px;left:7px}
+
+.alert_success .alertMessagesIcon{background:#36b37e}
+.alert_error .alertMessagesIcon{background:#fe5630}
+.alert_warning .alertMessagesIcon{background:#ffab00}
+.alert_info .alertMessagesIcon{background:#2584ff}
+
+.alertMessagesText{padding:10px;flex:1;font:normal 400 14px/18px $defaultFont;border-radius:0px 3px 3px 0px;border:1px solid transparent;border-left:none}
+.alertMessagesText a:hover{text-decoration:underline}
+
+.alert_success .alertMessagesText{border-color:#c7e4d5}
+.alert_error .alertMessagesText{border-color:#e4cdc6}
+.alert_warning .alertMessagesText{border-color:#e0daba}
+.alert_info .alertMessagesText{border-color:#cedbec}

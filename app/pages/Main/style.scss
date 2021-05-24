@@ -1,0 +1,26 @@
+@import '../../styles/variable.scss';
+
+.componentH1{font:normal 700 30px/42px 'Avenir', '-apple-system', system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;color:#3b404c}
+.componentH2{font:normal 500 22px/32px 'Avenir', '-apple-system', system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;color:#3b404c;margin-top:32px}
+.versionP{font:normal 400 14px/22px $defaultFont;color:#4b545f;tab-size:14;margin-top:10px}
+.mobileP{display:none}
+
+.divCode{font-size:13px}
+.divCode pre{padding:20px !important;border-radius:0px 0px 3px 3px !important;margin:0px !important;background:#2a1e31 !important}
+.divCode span.token[style="color: rgb(255, 255, 182); text-decoration: underline;"]{color:#fc618d !important;text-decoration:none !important}
+
+.divCodeHeader{background:#191919;border-bottom:1px solid #131313;border-radius:3px 3px 0px 0px;display:flex;justify-content:space-between;margin-top:20px}
+.divCodeHeader span{display:flex;height:26px;align-items:center;justify-content:center;margin:0px 12px}
+.divCodeHeader span i{width:1em;height:1em;border-radius:1em;font-size:8px}
+.divCodeHeader span i + i{margin-left:4px}
+.divCodeHeader span i:nth-child(1){background:#f65951}
+.divCodeHeader span i:nth-child(2){background:#e5c12a}
+.divCodeHeader span i:nth-child(3){background:#54c22d}
+
+// Responsive
+@include media('<=smallTablet'){
+	.componentH1{font-size:24px;line-height:34px}
+	.componentH2{font-size:20px;line-height:28px}
+	.versionP{display:none}
+	.mobileP{display:block}
+}

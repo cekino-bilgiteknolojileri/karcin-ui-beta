@@ -1,0 +1,70 @@
+@import '../../../styles/variable.scss';
+
+.touchable{background:#2152cc;color:#fff;height:40px;box-sizing:border-box;border-radius:3px;cursor:pointer;display:flex;transition:$defaultTransition;width:max-content}
+.touchable span{background:rgba(0,0,0, 0.1);width:40px;height:40px;border-radius:3px 0px 0px 3px;display:flex;justify-content:center;align-items:center}
+.touchable span.allBorderRadius{border-radius:3px}
+.touchable span svg{font-size:16px}
+.touchable b{font:normal 500 14px/40px $defaultFont;padding:0px 24px;white-space:nowrap}
+.touchable:hover{background:rgb(0, 101, 255)}
+
+.touchable.disable{opacity:0.64;pointer-events:none}
+
+/* Spin İkon */
+.touchable span em.spin{width:14px;height:14px;border:2px solid #fff;box-sizing:border-box;border-radius:14px;border-top-color:rgba(255, 255, 255, 0.1);animation-name:buttonLoadCircle;animation-duration:1000ms;animation-timing-function:linear;animation-iteration-count:infinite}
+
+@keyframes buttonLoadCircle{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+
+/* Diğer Tasarımlar */
+.touchable.cancel{background:transparent;border:1px solid #d1d5da;color:#676c71}
+.touchable.cancel span{height:38px;border-radius:2px 0px 0px 2px}
+.touchable.cancel span.allBorderRadius{border-radius:2px}
+.touchable.cancel b{line-height:38px}
+.touchable.cancel:hover{background:#ececec}
+
+.touchable.danger{background:#ff475f}
+.touchable.danger:hover{background:#e03a50}
+
+.touchable.secondary{background:#6c757d}
+.touchable.secondary:hover{background:#596169}
+
+.touchable.warning{background:#ffb827}
+.touchable.warning:hover{background:#ecac27}
+
+.touchable.success{background:#36b37e}
+.touchable.success:hover{background:#2b9a6b}
+
+.touchable.info{background:#17a2b8}
+.touchable.info:hover{background:#1993a7}
+
+.touchable.dark{background:#343a40}
+.touchable.dark:hover{background:#202529}
+
+/* Medium */
+.touchable.medium{height:34px}
+.touchable.medium span{height:34px;width:34px}
+.touchable.cancel.medium span{height:32px;width:32px}
+.touchable.medium b{font:normal 500 12px/34px $defaultFont;padding:0px 16px}
+.touchable.cancel.medium b{line-height:32px}
+
+/* Small */
+.touchable.small{height:30px}
+.touchable.small span{height:30px;width:30px}
+.touchable.cancel.small span{height:28px;width:28px}
+.touchable.small b{font:normal 500 12px/30px $defaultFont;padding:0px 16px}
+.touchable.cancel.small b{line-height:28px}
+
+/* Extra Small */
+.touchable.extraSmall{height:26px}
+.touchable.extraSmall span{height:26px;width:26px}
+.touchable.cancel.extraSmall span{height:24px;width:24px}
+.touchable.extraSmall span svg{font-size:12px}
+.touchable.extraSmall b{font:normal 500 12px/26px $defaultFont;padding:0px 12px}
+.touchable.cancel.extraSmall b{line-height:24px}
+.touchable.extraSmall span em.spin{width:10px;height:10px;border-radius:10px}
+
+/* Full */
+.touchable.full{width:auto}
+.touchable.full b{flex:1;text-align:center}

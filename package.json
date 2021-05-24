@@ -1,0 +1,36 @@
+{
+	"name": "karcin-showcase",
+	"version": "0.0.82",
+	"scripts": {
+		"start": "webpack-dev-server --config webpack.config.js --port 3838",
+		"build": "webpack --progress -p && rm -rf ./dist/icon",
+		"svgr": "svgr ./assets/icon -d ./app/support/Icons --ext tsx --svg-props 'width=1em,height=1em,className=idb'"
+	},
+	"author": "Çekino Bilgi Teknolojileri A.Ş.",
+	"dependencies": {
+		"axios": "^0.21.1",
+		"moment": "^2.29.1",
+		"react": "16.14.0",
+		"react-dom": "16.14.0",
+		"react-router-dom": "^5.2.0",
+		"react-syntax-highlighter": "^15.4.3",
+		"simplebar-react": "^2.3.2"
+	},
+	"devDependencies": {
+		"@svgr/cli": "^5.5.0",
+		"@types/react": "^16.14.0",
+		"copy-webpack-plugin": "^6.2.0",
+		"core-js": "^3.6.5",
+		"css-loader": "^4.3.0",
+		"mini-css-extract-plugin": "^1.0.0",
+		"node-sass": "^4.14.1",
+		"replace-in-file": "^6.1.0",
+		"sass-loader": "^10.0.2",
+		"ts-loader": "^8.0.4",
+		"typescript": "^4.0.3",
+		"webpack": "^4.44.2",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0",
+		"webpack-file-changer": "^2.0.1"
+	}
+}

@@ -1,0 +1,38 @@
+$defaultFont: '-apple-system', system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$defaultFontNumber: 'Avenir', '-apple-system', system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$defaultTransition: all 200ms;
+$borderColor: #dadfe2;
+$gardiyanColor: #313f6e;
+$sidebarWidth: 248px;
+$blackFont: #595d6e;
+$hoverBlue: #5183f5;
+
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+
+@mixin media-breakpoint($size : 'md'){
+  $max : '';
+  @if ($size == 'xs') {
+    $max : $breakpoint-xs;
+  }
+  @else if ($size == 'sm'){
+    $max : $breakpoint-sm;
+  }
+  @else if ($size == 'md'){
+    $max : $breakpoint-md;
+  }
+  @else if ($size == 'lg'){
+    $max : $breakpoint-lg;
+  }
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@import 'media';

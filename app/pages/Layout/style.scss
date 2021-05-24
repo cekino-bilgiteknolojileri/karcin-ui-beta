@@ -1,0 +1,4 @@
+@import '../../styles/variable.scss';
+
+.solidBackground .layoutContent p, .karcinPanelContent p{font:normal 400 14px/22px $defaultFont;color:#4b545f}
+.solidBackground .layoutContent p + p, .karcinPanelContent p + p{margin-top:20px}
